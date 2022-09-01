@@ -1,0 +1,240 @@
+@charset "UTF-8";
+* {
+  font-family: Inter;
+}
+
+.wrapper {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper .container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50vw;
+  min-width: 400px;
+  position: relative;
+}
+
+.wrapper .container__favorite {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #766ed3;
+  display: flex;
+  flex-shrink: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .container__favorite img {
+  width: 30px;
+  height: 30px;
+}
+
+.wrapper .container__productInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .container__productInfo {
+    justify-content: center;
+  }
+}
+
+.wrapper .container__productInfo__imgWrapper {
+  width: 40%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .container__productInfo__imgWrapper__picture {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wrapper .container__productInfo__descr {
+  min-height: 35vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 40%;
+  padding-top: 2em;
+}
+
+@media screen and (max-width: 1040px) {
+  .wrapper .container__productInfo__descr {
+    width: 70%;
+    margin-top: 1em;
+  }
+}
+
+.wrapper .container__productInfo__descr::-webkit-scrollbar {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  /* округлось бегунка */
+  width: 8px;
+}
+
+.wrapper .container__productInfo__descr::-webkit-scrollbar-thumb {
+  background-color: #d1d1d1;
+  /* цвет бегунка */
+  border-radius: 10px;
+  border: 3px solid #d1d1d1;
+}
+
+.wrapper .container__productInfo__descr h2 {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.2em;
+  width: 100%;
+  color: #171313;
+  margin-bottom: 1em;
+}
+
+.wrapper .container__productInfo__descr__section > span:first-child {
+  font-family: Inter;
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.wrapper .container__productInfo__descr__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+.wrapper .container__productInfo__descr__price img {
+  max-width: 26px;
+  max-height: 26px;
+  height: 100%;
+}
+
+.wrapper .container__productInfo__descr__price span {
+  font-size: 1.5em;
+}
+
+.wrapper .container__productInfo__descr__price .oldPrice {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 1.1em;
+}
+
+.wrapper .container__productInfo__userCommunication {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.wrapper .container__productInfo__userCommunication__item {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 2em;
+  height: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrapper .container__productInfo__userCommunication__item img {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .container__productInfo__userCommunication {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
+.wrapper__lowScreenPriceMenu {
+  background-color: #766ed3;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3em;
+}
+
+.wrapper__lowScreenPriceMenu img {
+  max-width: 26px;
+  max-height: 26px;
+  height: 100%;
+}
+
+.wrapper__lowScreenPriceMenu span {
+  font-size: 1.5em;
+}
+
+.wrapper__lowScreenComMennu {
+  background-color: #766ed3;
+  justify-content: center;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.wrapper__lowScreenComMennu section {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.marginLeft2em {
+  margin-left: 2em;
+}
+
+.d__flex__alignItems__center {
+  display: flex;
+  width: 165px;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.discountPrice {
+  color: red;
+  font-size: 1.3em;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 12px;
+}
+
+.dFlex {
+  display: flex;
+  font-size: 12px;
+}
+
+.dNone {
+  display: none;
+}

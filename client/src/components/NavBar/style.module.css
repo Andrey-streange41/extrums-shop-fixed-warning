@@ -1,0 +1,121 @@
+* {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  z-index: 2;
+  margin-left: -2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 84px;
+  width: 84px;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: 450ms;
+  margin-bottom: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 0px;
+  }
+}
+
+.container section {
+  display: none;
+}
+
+.container:hover {
+  z-index: 100;
+  transition: 100ms;
+  width: 280px;
+}
+
+.container:hover section {
+  display: flex;
+}
+
+.container:hover .activeBlock {
+  background: #766ed3;
+  border-radius: 10px;
+  color: white;
+  transition: 200ms;
+}
+
+.container:hover .activeBlock span {
+  transition: 500ms;
+  margin-left: 5px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.container:hover span {
+  transition: 500ms;
+  margin-left: 5px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.container:hover li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.container__linkList {
+  margin-top: 150px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__linkList__myLink {
+  width: 220px;
+  text-decoration: none;
+  position: relative;
+}
+
+.container__linkList__myLink li {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__linkList__myLink li span {
+  display: none;
+  color: black;
+}
+
+.container__linkList__myLink li img {
+  padding: 10px;
+}
+
+.container__subMenu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.active {
+  background: #766ed3;
+  border-radius: 10px;
+}

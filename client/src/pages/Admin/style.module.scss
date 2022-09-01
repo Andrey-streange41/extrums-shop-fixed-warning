@@ -1,0 +1,173 @@
+.container {
+    background: #ebecee;
+    min-height: 100vh;
+    font-family: Inter;
+
+    &__field {
+        margin-left: 300px;
+
+        &__content {
+            margin-top: 5em;
+            display: flex;
+            gap: 3em;
+            justify-content: center;
+            
+            padding-bottom: 3em;
+
+            &__col1 {
+                display: flex;
+                flex-direction: column;
+                gap:2em;
+                width: 60%;
+                &__row1 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                   
+
+                    &__greeting {
+                        gap: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        &__buttons{
+                            display: flex;
+                            align-items: center;
+                            gap:1em;
+                        }
+
+                        h1 {
+                            text-align: start;
+                            font-size: 2em;
+                            font-weight: 600;
+                        }
+                        span {
+                            color: rgb(172, 172, 172);
+                            font-size:1.2em;
+                        }
+                    }
+                }
+                &__list{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                &__statistick {
+                    width: 100%;
+                    min-height: 30vh;
+                    border-radius: 35px;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    gap:3em;
+                    background:rgb(233, 231, 224);
+                    &__item{
+                        
+                        margin-top: 2em;
+                        &__icon{
+                            background:rgb(212, 205, 205);
+                            border-radius: 50%;
+                            height: 60px;
+                            width: 60px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.5em;
+                           
+                        }
+                        &__title,&__info{
+                            color: grey;
+                        }
+                        &__amount{
+                            font-size:2em;
+                            font-weight: 1000;
+                        }
+                    }
+                }
+            }
+            &__col2 {
+                display: flex;
+                flex-direction: column;
+                border-radius: 30px;
+                width: 30%;
+                background-color: rgb(24, 24, 24);
+                color: white;
+
+                h2{
+                    margin-top:2em;
+                    margin-bottom:2em;
+                    font-size: 1.5em;
+                    text-align:center;
+                }
+                &__list{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left:35%;
+                    justify-content:flex-start;
+                   
+                    gap:3em;
+                   
+
+                    &__item{
+                        display:flex;
+                        align-items: center;
+                        gap:2em;
+
+                        &__round{
+                            display:flex;
+                            justify-content:center;
+                            align-items: center;
+                            background:rgb(230, 224, 224);
+                            border-radius: 50%;
+                            height: 60px;
+                            width: 60px;
+                            img{
+                                width:30px;
+                                height: 30px;
+                            }
+                        }
+                        &__info{
+                            display:flex;
+                           flex-direction:column;
+                            gap:1.4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col{
+    display: flex;
+    gap:2em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart{
+    color:red;
+}
+
+.crown{
+    color: yellow;
+}
+
+.scale,.users,.products,.views{
+    font-size: 1.5em;
+    color: black;
+}
+
+.users{
+
+}

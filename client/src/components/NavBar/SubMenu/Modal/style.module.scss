@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.container{
+    width: 403px;
+    height: 350px;
+    border: solid #766ED3 3px;
+    background: #FFFFFF;
+    position: absolute;
+    right: -210%;
+    border-radius: 10px;
+   
+    z-index: 4;
+    &__content{
+        margin-top: 1em;
+        
+        display: flex;
+        flex-direction: column;
+        h2{
+            margin-left: 2em;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        &__item{
+           
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2em;
+            margin-left: 2.2em;
+            color: #524F5E;
+            margin-top:1.2em;
+        }
+    }
+}
+
+.active{
+   right: -210%;
+   color: black;
+}
+
+.unactive{
+    left: -99999%;
+}
+
+.selectedItem{
+   
+    text-decoration: underline;
+}

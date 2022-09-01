@@ -1,0 +1,40 @@
+.container{
+    width: 22vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    background-color: #e7d3ff;
+    margin-bottom: 3em;
+    min-height: 20vh;
+
+    border-radius: 40px;
+        &__col{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            align-items: flex-start;
+            margin-left: 2em;
+            h1{
+                text-align: start;
+                font-size: 1.5em;
+            }
+            &__info{
+                color: grey;
+            }
+            &__price{
+                font-size: 1.5em;
+                font-weight: 1000;
+            }
+            
+        }
+
+}
+
+
+.circular{
+    position: relative;
+    width: 100px;
+    height: 50%;
+}

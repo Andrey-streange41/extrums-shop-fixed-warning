@@ -1,0 +1,28 @@
+.purposeList {
+  margin-bottom: 2em;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4em;
+  gap: 2em;
+}
+
+.purposeList li {
+  border: solid 1px #766ed3;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: #766ed3;
+  position: relative;
+}
+
+.purposeList li img {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+}

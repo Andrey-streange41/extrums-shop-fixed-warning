@@ -1,0 +1,45 @@
+.container {
+  width: 90%;
+  min-height: 230px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  gap: 2em;
+  margin-bottom: 4em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.container .remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.container__userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 25%;
+  gap: 1em;
+  min-height: 240px;
+}
+
+.container__userInfo img {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+}
+
+.container__message {
+  display: flex;
+  min-height: 100%;
+  width: 72%;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 29px;
+}

@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+
+.container__item {
+  position: relative;
+  margin-top: 15px;
+  width: 200px;
+  border: solid purple 1px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.container__item img {
+  margin-left: 20px;
+}
+
+.container .activeBlock {
+  background: #766ed3;
+  border-radius: 10px;
+  color: white;
+  transition: 200ms;
+  margin-right: 20px;
+}
+
+.container .activeBlock span {
+  transition: 500ms;
+  margin-left: 5px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,30 @@
+.container{
+   
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    border-radius: 15px;
+    position: relative;
+  
+    &__addButton{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        margin-right: 15px;
+       
+        margin-top: 1.7em;
+
+        &:hover{
+            cursor: pointer;
+           &> path{
+            fill:#766ed3;
+                cursor:pointer;
+            }   
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+.item{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border: solid grey 1px;
+    border-radius:6px;
+    min-height:100px;
+    width:90%;
+
+    &__left{
+        display:flex;
+        align-items:center;
+        gap:2em;
+        width:40%;
+
+        img{
+            width: 50px;
+            height:100%;
+        }
+            &__info{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+    }
+
+    
+}
+
+.basket{
+    width:24px;
+    height: 24px;
+    margin-right:2em;
+    cursor:pointer;
+}

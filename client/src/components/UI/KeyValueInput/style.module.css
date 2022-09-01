@@ -1,0 +1,49 @@
+.characteristics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+}
+
+.characteristics__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 0.5em;
+}
+
+.characteristics input {
+  max-width: 70%;
+  border: solid #766ed3 2px;
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.characteristics .push {
+  margin-top: 2em;
+  cursor: pointer;
+  width: 20%;
+  margin-left: 44%;
+  position: relative;
+  padding: 10px;
+  border: #766ed3 solid 1px;
+  border-radius: 15px;
+  background-color: white;
+  color: #766ed3;
+  transition: color 1s;
+  transition: all 0.3s ease 0s;
+}
+
+.characteristics .push:active {
+  background-color: #766ed3;
+  color: white;
+  border: solid white 2px;
+}
+
+.characteristics .push:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}

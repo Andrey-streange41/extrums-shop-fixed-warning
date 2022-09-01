@@ -1,0 +1,38 @@
+.container {
+  margin-top: 55px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 953px;
+}
+
+.container__list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.container__list__item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.container__list__item span {
+  text-transform: capitalize;
+}
+
+.container__list__item img {
+  margin: 0 10px;
+  width: 16px;
+  height: 16px;
+  cursor: default;
+}
+
+.container__list__item:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,116 @@
+* {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.container {
+    z-index: 2;
+    margin-left: -2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 84px;
+    width: 84px;
+    min-height: 100vh;
+    background: #ffffff;
+    font-family: "Source Sans Pro", sans-serif;
+    transition: 450ms;
+    margin-bottom: 40px;
+    position: fixed;
+    left: 0;
+    top:0;
+    cursor: pointer;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    @media screen and (max-width: 600px) {
+        margin-top: 0px;
+    }
+
+    section {
+       display: none;
+    }
+
+    &:hover {
+       z-index: 100;
+        transition: 100ms;
+        section {
+            display: flex;
+        }
+
+        width: 280px;
+
+        .activeBlock {
+            background: #766ed3;
+            border-radius: 10px;
+            color: white;
+            transition: 200ms;
+            span {
+                transition: 500ms;
+                margin-left: 5px;
+                display: block;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+        }
+
+        span {
+            transition: 500ms;
+            margin-left: 5px;
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__linkList {
+        margin-top: 150px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+
+        &__myLink {
+            width: 220px;
+            text-decoration: none;
+            position: relative;
+            li {
+                
+                margin-top: 25px;
+                margin-bottom: 15px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    display: none;
+                    color: black;
+                }
+
+                img {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    &__subMenu {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.active {
+    background: #766ed3;
+    border-radius: 10px;
+}

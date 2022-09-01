@@ -1,0 +1,28 @@
+.container {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 15px;
+  position: relative;
+}
+
+.container__addButton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  margin-top: 1.7em;
+}
+
+.container__addButton:hover {
+  cursor: pointer;
+}
+
+.container__addButton:hover > path {
+  fill: #766ed3;
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.container {
+  background: #ebecee;
+  min-height: 120vh;
+}
+
+.container__field {
+  margin-left: 100px;
+}
+
+.container__field__content {
+  flex-direction: column;
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3em;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media screen and (max-width: 640px) {
+  .container__field__content {
+    margin-left: 0px;
+  }
+}

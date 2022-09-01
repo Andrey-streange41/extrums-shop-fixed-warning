@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    background: #ffffff;
+    
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    position: absolute;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        min-width: 200px;
+        width: 100%;
+        min-height: 146px;
+        flex-shrink: 1;
+
+        &__item {
+            min-height: 120px;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-family: "Source Sans Pro", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px;
+                color: #524f5e;
+                min-width: 140px;
+                width: 141px;
+                margin-bottom: 10px;
+            }
+
+            &__links {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                list-style: none;
+
+                .link {
+                    text-decoration: none;
+                    color: #524f5e;
+                    font-family: "Source Sans Pro", sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 23px;
+                    min-width: 140px;
+                    width: 140px;
+                    
+                    &:hover{
+                        text-shadow: 2px 1px 3px #000; color: #767676;
+                    }
+                }
+
+                li {
+                    line-height: 23px;
+                    list-style: none;
+                }
+            }
+            &__icons {
+                width: 60%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+
+    &__logoSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 40%;
+        .logo {
+            width: 65px;
+            height: 51px;
+            padding-right: 15px;
+        }
+
+        .title {
+            width: 180px;
+            height: 16px;
+        }
+        p {
+            color: #435c6b;
+            font-family: "Source Sans Pro", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        span {
+            font-family: "Source Sans Pro", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #524F5E;
+            font-weight: 500;
+        }
+    }
+}

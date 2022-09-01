@@ -1,0 +1,46 @@
+img {
+    cursor: pointer;
+}
+
+.container {
+    background: #ebecee;
+    display: flex;
+    width: 100%;
+    position: relative;
+    &__wrapper {
+        position: relative;
+
+        width: 100%;
+        min-width: 740px;
+        margin: 100px 0;
+
+        margin-left: 85px;
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1150px;
+            min-width: 363px;
+            margin: auto;
+            &__advertising {
+                min-height: 100px;
+                min-width: 100px;
+                border-radius: 10px;
+            }
+
+            &__row {
+                margin-top: 3%;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

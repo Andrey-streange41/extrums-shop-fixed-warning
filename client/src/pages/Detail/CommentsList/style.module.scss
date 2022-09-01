@@ -1,0 +1,21 @@
+.container{
+    width: 80%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+
+
+    &__sort{
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+
+    }
+}
+
+.buttonActive{
+    display: flex;
+}
+

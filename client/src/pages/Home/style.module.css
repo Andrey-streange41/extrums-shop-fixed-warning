@@ -1,0 +1,41 @@
+img {
+  cursor: pointer;
+}
+
+.container {
+  background: #ebecee;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.container__wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 100px 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.container__wrapper__content {
+  margin: auto;
+}
+
+.container__wrapper__content__advertising {
+  min-height: 100px;
+  min-width: 100px;
+  border-radius: 10px;
+}
+
+.container__wrapper__content__row {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container__wrapper__content__row img {
+  border-radius: 10px;
+}

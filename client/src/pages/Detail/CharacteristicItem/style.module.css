@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+.item {
+  display: flex;
+  flex-direction: column;
+  min-width: 40%;
+  gap: 1em;
+}
+
+.item__name {
+  font-weight: 600;
+  font-size: .9em;
+}
+
+.item__container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.item__container__info {
+  font-size: .8em;
+  color: #696767;
+  margin-right: 1em;
+}
+
+.active {
+  background: #766ed3;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.charInput {
+  min-width: 200px;
+}
+
+.save,
+.pencil,
+.remove {
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.2em;
+}
+
+.save:hover,
+.pencil:hover,
+.remove:hover {
+  color: #766ed3;
+  font-size: 20px;
+  transform: scale(1.2);
+}
+
+.dNone {
+  display: none;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.remove:hover {
+  cursor: pointer;
+  font-size: 20px;
+  color: #c02222;
+}
