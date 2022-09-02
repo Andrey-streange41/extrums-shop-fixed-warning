@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { IProduct } from "../../types/favoriteList.types.ts";
 import { ProductCard } from "../ProductCard/index.tsx";
@@ -7,7 +7,11 @@ import ms from "./style.module.scss";
 import { useAppSelector } from "../../hooks.ts";
 import { RootState } from "../../app/store.ts";
 
-export const FilteredList = ({ filterList }) => {
+interface IFilterList {
+  filterList: IProduct[];
+}
+
+export const FilteredList: FC<IFilterList> = ({ filterList }) => {
   const mode = useAppSelector((s: RootState) => s.toolsPanel.isActiveViewMode);
 
   return (

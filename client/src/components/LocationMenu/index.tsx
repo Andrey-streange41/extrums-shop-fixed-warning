@@ -41,7 +41,7 @@ export const LocationMenu = () => {
           className={ms.container__list__item}
         >
           <span style={{ textTransform: "capitalize" }}>{currentPage} </span>
-          {currentCategory ? <img src={rightArrow} alt={"img"} /> : null}
+          {currentCategory ? <img src={rightArrow} alt={"rigthArrow"} /> : null}
         </li>
 
         <li
@@ -53,7 +53,7 @@ export const LocationMenu = () => {
           }}
         >
           <span>{currentCategory}</span>
-          {subCategory ? <img src={rightArrow} alt={"img"} /> : null}
+          {subCategory ? <img src={rightArrow} alt={"rigthArrow"} /> : null}
         </li>
         <li className={ms.container__list__item} onClick={() => {}}>
           {subCategory}

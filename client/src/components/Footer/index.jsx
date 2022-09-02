@@ -10,11 +10,11 @@ export const Footer = () => {
   return (
     <section className={ms.footer}>
     <section className={ms.container}>
-      {linkList.map((item) => (
+      {linkList?.map((item) => (
         <section className={ms.container__item} key={item.title}>
           <h3>{item.title}</h3>
           <ul className={ms.container__item__links}>
-            {item.links.map((link) => (
+            {item?.links?.map((link) => (
               <Link className={ms.link} key={link.text} to={link.to}>
                 <li>{link.text}</li>
               </Link>
@@ -25,9 +25,9 @@ export const Footer = () => {
       <section className={ms.container__item}>
         <h3>Social media</h3>
         <section className={ms.container__item__icons}>
-          {iconsList.map((icon) => (
-            <a key={icon.to} href={icon.to}>
-              <img src={icon.src} alt={icon.to} />
+          {iconsList?.map((icon) => (
+            <a key={icon?.to} href={icon?.to}>
+              <img src={icon?.src} alt={'SMM icon'} />
             </a>
           ))}
         </section>

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { ChangeEvent, useMemo, useState } from "react";
 import ms from "./style.module.scss";
 import birdDown from "../../assets/images/birdDown.png";
 import birdUp from "../../assets/images/birdUpModal.png";
@@ -16,7 +16,8 @@ import { getProductsThunk } from "../../app/slices/productsListSlice.ts";
 import { useAppSelector, useAppDispatch } from "../../hooks.ts";
 import { RootState } from "../../app/store.ts";
 import { IPurpose } from "../../types/favoriteList.types.ts";
-import { IModalItem } from "../../types/navBar.types.ts";
+import { IModalItem,INavBarSubItem } from "../../types/navBar.types.ts";
+
 
 export const FilterMenu = () => {
   const subMenu = useAppSelector((s: RootState) => s.navBar.subMenu);
@@ -39,7 +40,7 @@ export const FilterMenu = () => {
   const [purposeList, setPurposeList] = useState<string[]>([]);
 
   const handleSelectPurpose = (purposeItem: IPurpose) => {
-    if (purposeItem.isActive) {
+    if (purposeItem&&purposeItem.isActive) {
       setPurposeList([...purposeList, purposeItem.text]);
     } else {
       setPurposeList(
@@ -51,15 +52,15 @@ export const FilterMenu = () => {
   const getFilter = async () => {
     const query = {
       purposes: purposeList,
-      category: subMenu[subMenu.findIndex((el) => el.isActive)]?.text,
+      category: subMenu[subMenu.findIndex((el:INavBarSubItem) => el.isActive)]?.text,
       sub_category: subMenu
-        .find((el) => el.isActive)
-        ?.modalItems?.items?.find((el) => el.isActive)?.category,
+        .find((el:INavBarSubItem) => el.isActive)
+        ?.modalItems?.items?.find((el:IModalItem) => el.isActive)?.category,
       price: price,
     };
     dispatch(getProductsThunk(query));
   };
-  const memoizedCallback = useMemo(getFilter, [
+  useMemo(getFilter, [
     price,
     dispatch,
     purposeList,
@@ -100,9 +101,9 @@ export const FilterMenu = () => {
             : ms.container__list
         }
       >
-        {subMenu.find((i) => i.isActive) ? (
+        {subMenu.find((i:INavBarSubItem) => i.isActive) ? (
           subMenu
-            .find((i) => i.isActive)
+            .find((i:INavBarSubItem) => i.isActive)
             ?.modalItems.items.map((item:IModalItem, index:number) => (
               <section className={ms.container__list__item} key={index}>
                 <li>
@@ -111,7 +112,7 @@ export const FilterMenu = () => {
                     onClick={() => {
                       const query = {
                         category:
-                          subMenu[subMenu.findIndex((el) => el.isActive)]?.text,
+                          subMenu[subMenu.findIndex((el:INavBarSubItem) => el.isActive)]?.text,
                         sub_category: item?.category,
                       };
                       dispatch(getProductsThunk(query));
@@ -148,7 +149,7 @@ export const FilterMenu = () => {
           type="text"
           placeholder="10$"
           maxLength={6}
-          onChange={(e) => {
+          onChange={(e:ChangeEvent<HTMLInputElement>) => {
             dispatch(setPrice({ ...price, [e.target.name]: e.target.value }));
           }}
         />
@@ -159,7 +160,7 @@ export const FilterMenu = () => {
           placeholder="156000$"
           maxLength={6}
           value={price.max}
-          onChange={(e) => {
+          onChange={(e:ChangeEvent<HTMLInputElement>) => {
             dispatch(setPrice({ ...price, [e.target.name]: e.target.value }));
           }}
         />
@@ -181,10 +182,10 @@ export const FilterMenu = () => {
             : ms.container__checkboxMenu2 + " " + ms.unactive
         }
       >
-        {subMenu.find((el) => el.isActive) ? (
+        {subMenu.find((el:INavBarSubItem) => el.isActive) ? (
           subMenu
-            .find((el) => el.isActive)
-            ?.purpose.map((item) => (
+            .find((el:INavBarSubItem) => el.isActive)
+            ?.purpose.map((item:IPurpose) => (
               <CheckBox
                 handleSelect={handleSelectPurpose}
                 key={item.name}
