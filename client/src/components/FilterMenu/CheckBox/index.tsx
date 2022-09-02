@@ -1,7 +1,8 @@
 import React, { FC, useState } from "react";
+import { useDispatch } from "react-redux";
+
 import ms from "./style.module.scss";
 import check from "../../../assets/images/check.png";
-import { useDispatch } from "react-redux";
 import {
   setSelectedItems,
   removeSelectedItem,
@@ -16,7 +17,7 @@ interface ICheck {
 }
 
 export const CheckBox: FC<ICheck> = ({ item, handleSelect }) => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState<boolean>(false);
   const dispatch = useDispatch();
 
   return (
@@ -37,7 +38,7 @@ export const CheckBox: FC<ICheck> = ({ item, handleSelect }) => {
           }
         }}
       >
-        <img src={active ? check : null} alt="" />
+        <img src={active ? check : null} />
       </div>
       <label htmlFor="">{item?.name || false}</label>
     </section>

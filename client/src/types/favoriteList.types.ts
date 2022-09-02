@@ -77,3 +77,8 @@ export interface IFavorites{
   userId:number;
   productId:number;
 }
+
+export interface IPurpose{
+  text:string;
+  isActive:boolean;
+}

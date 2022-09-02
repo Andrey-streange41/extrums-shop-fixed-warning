@@ -1,4 +1,5 @@
 import React from "react";
+
 import { IProduct } from "../../types/favoriteList.types.ts";
 import { ProductCard } from "../ProductCard/index.tsx";
 import { ProductCardV2 } from "../ProductCardV2/index.tsx";

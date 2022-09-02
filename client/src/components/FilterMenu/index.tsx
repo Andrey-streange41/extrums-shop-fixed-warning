@@ -1,4 +1,4 @@
-import React, {  useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import ms from "./style.module.scss";
 import birdDown from "../../assets/images/birdDown.png";
 import birdUp from "../../assets/images/birdUpModal.png";
@@ -13,15 +13,16 @@ import {
   setPrice,
 } from "../../app/slices/modalFilterSlice.ts";
 import { getProductsThunk } from "../../app/slices/productsListSlice.ts";
-import { useAppSelector,useAppDispatch } from "../../hooks.ts";
+import { useAppSelector, useAppDispatch } from "../../hooks.ts";
 import { RootState } from "../../app/store.ts";
+import { IPurpose } from "../../types/favoriteList.types.ts";
+import { IModalItem } from "../../types/navBar.types.ts";
 
 export const FilterMenu = () => {
   const subMenu = useAppSelector((s: RootState) => s.navBar.subMenu);
   const isOpenCategoryMenu = useAppSelector(
     (s: RootState) => s.modalFilter.isOpenCategoryMenu
   );
-  const dispatch = useAppDispatch();
   const isActiveFilterMenu = useAppSelector(
     (s: RootState) => s.toolsPanel.isActiveFilterMenu
   );
@@ -33,17 +34,20 @@ export const FilterMenu = () => {
   );
   const price = useAppSelector((s: RootState) => s.modalFilter.price);
 
+  const dispatch = useAppDispatch();
+
   const [purposeList, setPurposeList] = useState<string[]>([]);
 
-  const handleSelectPurpose = (purposeItem: any) => {
+  const handleSelectPurpose = (purposeItem: IPurpose) => {
     if (purposeItem.isActive) {
       setPurposeList([...purposeList, purposeItem.text]);
     } else {
-      setPurposeList(purposeList.filter((el) => el !== purposeItem.text));
+      setPurposeList(
+        purposeList.filter((el: string) => el !== purposeItem.text)
+      );
     }
   };
 
-  
   const getFilter = async () => {
     const query = {
       purposes: purposeList,
@@ -55,11 +59,14 @@ export const FilterMenu = () => {
     };
     dispatch(getProductsThunk(query));
   };
-const memoizedCallback = useMemo(getFilter,[price, dispatch,purposeList,subMenu]);
+  const memoizedCallback = useMemo(getFilter, [
+    price,
+    dispatch,
+    purposeList,
+    subMenu,
+  ]);
 
-  useEffect(() => {
-    
-  }, [memoizedCallback]);
+ 
   return (
     <section
       className={
@@ -96,7 +103,7 @@ const memoizedCallback = useMemo(getFilter,[price, dispatch,purposeList,subMenu]
         {subMenu.find((i) => i.isActive) ? (
           subMenu
             .find((i) => i.isActive)
-            ?.modalItems.items.map((item, index) => (
+            ?.modalItems.items.map((item:IModalItem, index:number) => (
               <section className={ms.container__list__item} key={index}>
                 <li>
                   <div
